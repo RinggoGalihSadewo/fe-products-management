@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-primary: #fff;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background-color: var(--background-primary);
+}
+
+.input-form {
+  @apply border py-1 px-3 text-black transition duration-200 mt-2 focus:shadow-2xl;
+}
+
+.input-password {
+  @apply w-[100%] border py-1 px-3 text-black transition duration-200 mt-2 focus:shadow-2xl;
+}
+
+.btn-login {
+  @apply w-full text-center text-white font-bold bg-black rounded p-2 shadow hover:shadow-2xl hover:bg-[#383838] transition duration-200 tracking-wider;
+}
+
+.btn {
+  @apply text-center text-white bg-black rounded p-2 hover:shadow-xl hover:bg-[#383838] transition duration-200 text-[0.8rem] tracking-wider font-bold;
+}
+
+.btn-edit {
+  @apply text-center text-white hover:bg-green-500 bg-green-700 rounded hover:shadow-xl transition duration-200 text-[0.8rem] tracking-wider font-bold;
+}
+
+.btn-delete {
+  @apply text-center text-white hover:bg-red-500 bg-red-700 rounded hover:shadow-xl  transition duration-200 text-[0.8rem] tracking-wider font-bold;
+}
+
+.navbar-link {
+  @apply hover:text-white bg-white p-2 rounded hover:bg-black transition duration-500 text-black;
+}
+
+.navbar-link-logout {
+  @apply hover:bg-red-500 bg-red-700 p-2 rounded transition duration-500 font-bold tracking-wider text-white;
+}
+
+.toggle-menu {
+  z-index: 9999;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #fff;
+  width: 65%;
+  display: flex;
+  transition: 0.2s;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggle-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+}
+
+.toggle-menu.active {
+  transition: 0.2s;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.page {
+  @apply border mx-1 bg-black rounded p-2 text-white hover:shadow-xl hover:bg-[#383838] transition duration-200 font-bold text-[0.8rem];
+}
+
+.btn-prev-next {
+  @apply text-center text-white rounded p-2 hover:shadow-xl transition duration-200 text-[0.8rem] tracking-wider font-bold;
+}
+
+.btn-pagination {
+  @apply text-center mx-2 text-black bg-white rounded p-2 hover:shadow-xl hover:text-white hover:bg-[#383838] transition duration-200 text-[0.8rem] tracking-wider font-bold border;
+}
+
+.btn-pagination.active {
+  @apply text-center mx-2 text-white bg-black rounded p-2 hover:shadow-xl hover:bg-[#383838] transition duration-200 text-[0.8rem] tracking-wider font-bold;
+}
