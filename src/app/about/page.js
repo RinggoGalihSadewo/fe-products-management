@@ -13,6 +13,7 @@ import MaterialUi from "../../assets/img/technology/material-ui.png";
 import TailwindCss from "../../assets/img/technology/tailwind-css.png";
 import Github from "../../assets/img/technology/github.png";
 import Vercel from "../../assets/img/technology/vercel.png";
+import Netlify from "../../assets/img/technology/netlify.png";
 import Laravel from "../../assets/img/technology/laravel.png";
 
 const About = () => {
@@ -139,6 +140,14 @@ const About = () => {
                   alt="Laravel logo"
                   className="w-[52px]"
                   style={{ marginTop: "-0.3rem" }}
+                />
+              </Grid>
+              <Grid>
+                <Image
+                  src={Netlify}
+                  alt="Netlify logo"
+                  className="w-[52px]"
+                  style={{ marginTop: "1.2rem", marginLeft: "0.5rem" }}
                 />
               </Grid>
             </Grid>
